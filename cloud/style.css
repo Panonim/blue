@@ -20,3 +20,10 @@ body {
     0 0 2px #fff,
     0 0 8px #fff;
 }
+.text {
+    color: white;
+    font-size: 50px;
+    margin-top: 25px;
+    letter-spacing: 1px;
+    text-algin: center;
+}
