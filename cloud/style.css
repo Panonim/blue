@@ -1,7 +1,5 @@
 body {
 font-family: 'Roboto', sans-serif;
-}
-body {
     background-color: #326e9c;
 }
 .cloudlogo {
@@ -29,9 +27,11 @@ body {
 }
 
 .custum-file-upload {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   height: 200px;
   width: 300px;
-  display: flex;
   flex-direction: column;
   align-items: space-between;
   gap: 20px;
