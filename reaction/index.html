@@ -46,6 +46,19 @@ background: linear-gradient(124deg, rgba(146,146,153,1) 0%, rgba(20,19,19,1) 100
     #target.active {
       background-color: green;
     }
+	    @media only screen and (max-width: 600px) {
+      #container {
+        width: 90vw;
+        height: 90vw;
+      }
+    }
+
+    @media only screen and (max-width: 400px) {
+      #container {
+        width: 95vw;
+        height: 95vw;
+      }
+    }
   </style>
   <script>
     var startTime;
