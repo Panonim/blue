@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Reaction Test</title>
+  	      <link rel="icon" type="image/png" href="Bolt_blue.png"/>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+background: rgb(146,146,153);
+background: linear-gradient(124deg, rgba(146,146,153,1) 0%, rgba(20,19,19,1) 100%);
+    }
+
+    #startButton {
+      padding: 12px 24px;
+      font-size: 18px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    #container {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      margin-top: 24px;
+    }
+
+    #target {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: red;
+      display: none;
+    }
+
+    #target.active {
+      background-color: green;
+    }
+  </style>
+  <script>
+    var startTime;
+    var targetVisible = false;
+    var timeoutId;
+    
+    function startGame() {
+      document.getElementById('startButton').style.display = 'none';
+      scheduleTargetAppearance();
+    }
+    
+    function scheduleTargetAppearance() {
+      var delay = Math.random() * 5000; 
+      timeoutId = setTimeout(showTarget, delay);
+    }
+    
+    function showTarget() {
+      var target = document.getElementById('target');
+      if (!targetVisible) {
+        targetVisible = true;
+        target.style.display = 'block';
+        target.classList.add('active');
+        startTime = new Date().getTime();
+      }
+    }
+    
+    function hitTarget() {
+      var endTime = new Date().getTime();
+      var reactionTime = endTime - startTime;
+      alert('Your reaction time is: ' + reactionTime + ' miliseconds.');
+      resetGame();
+    }
+    
+    function resetGame() {
+      var target = document.getElementById('target');
+      clearTimeout(timeoutId); // Anulowanie czasu oczekiwania
+      target.classList.remove('active');
+      target.style.display = 'none';
+      targetVisible = false;
+      document.getElementById('startButton').style.display = 'block';
+    }
+  </script>
+</head>
+<body>
+<img src="Bolt_blue" alt="Bolt Icon">
+  <h1>Reaction Time Test</h1>
+  <button id="startButton" onclick="startGame()">START</button>
+  <div id="container">
+    <div id="target" onclick="hitTarget()"></div>
+  </div>
+</body>
+</html>
