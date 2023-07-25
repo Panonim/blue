@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Strona z webhookiem</title>
+</head>
+<body>
+
+  <h1>Witaj na stronie z webhookiem!</h1>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script>
+    // Funkcja do wysłania żądania HTTP POST do webhooka
+    function sendWebhook() {
+      const webhookURL = 'https://discord.com/api/webhooks/1133528810202087514/ga6hGzaybpTfhoIm76NByUFKKOI3LETbalBjpDoM_S-D99q62oqQQC4I8mYYA-bhux5W';
+
+      // Dane do wysłania w formacie JSON
+      const data = {
+        message: 'Ktoś wszedł na stronę!',
+        timestamp: new Date().toISOString()
+      };
+
+      // Wysyłanie żądania HTTP POST za pomocą Axios
+      axios.post(webhookURL, data)
+        .then(response => {
+          console.log('Webhook został wysłany pomyślnie!', response);
+        })
+        .catch(error => {
+          console.error('Wystąpił błąd podczas wysyłania webhooka:', error);
+        });
+    }
+
+    // Wywołanie funkcji sendWebhook przy wejściu na stronę
+    window.onload = sendWebhook;
+  </script>
+
+</body>
+</html>
