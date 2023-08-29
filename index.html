@@ -1,9 +1,52 @@
-<head>
-     <meta name="viewport" content="width-device-width, initial-scale=1">
-</head>
-<body>
-<div>Discord: @blue.dev</div>
-<div>ViVi Bot Developer</div>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3369292026690081"
-     crossorigin="anonymous"></script>
-</body>
+<main class="prompt">
+  <p>Website making in progress</p>
+  <p>Check this page later</p>
+</main>
+<style>
+     body {
+  background-color: black;
+  color: #55ff55;
+  font-family: monospace;
+}
+.output {
+  color: white;
+}
+.active:after {
+  content: '_';
+}
+     </style>
+     <script>
+                return;
+    }
+    var charIdx = 0;
+
+    var typeChar = function() {
+      var rand = Math.round(Math.random() * 150) + 25;
+
+      setTimeout(function() {
+        var char = content[charIdx++];
+        element.append(char);
+        if(typeof char !== "undefined")
+          typeChar();
+        else {
+          element.append('<br/><span class="output">' + element.text().slice(9, -1) + '</span>');
+          element.removeClass('active');
+          typeLine(++idx);
+        }
+      }, skip ? 0 : rand);
+    }
+    content = 'echo "' + content + '"';
+    element.append('~$ ').addClass('active');
+    typeChar();
+  }
+
+  $lines.each(function(i) {
+    lineContents[i] = $(this).text();
+    $(this).text('').show();
+  });
+
+  typeLine();
+}
+
+terminal();
+     </script>
