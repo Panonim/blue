@@ -38,6 +38,7 @@ body {
 }
 
 a {
+	color: white;
   display: block;
   cursor: pointer;
   -webkit-animation: pulseColor 1000ms linear 3100ms forwards;
