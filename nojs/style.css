@@ -1,0 +1,45 @@
+body {
+  font-family: 'Josefin Sans', sans-serif;
+font-family: 'Jost', sans-serif;
+font-family: 'Manrope', sans-serif;
+font-family: 'Merienda', cursive;
+  background-color: #1c1c1c;
+  font-size: 50px;
+}
+h1 {
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Jost', sans-serif;
+font-family: 'Manrope', sans-serif;
+font-family: 'Rubik Iso', cursive;
+  text-align: center;
+  color: #d92b2b;
+    animation: 2s anim-lineUp ease-out;
+}
+.text {
+  color: white;
+  text-align: center;
+  font-size: 30px;
+}
+@keyframes anim-lineUp {
+  0% {
+    opacity: 0;
+    transform: translateY(80%);
+  }
+  20% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+.text2 {
+  font-size: 25px;
+}
+a, text {
+  color: white;
+}
