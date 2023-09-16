@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pricing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Buy more &nbsp;<h2 class="space-text">s p a c e</h2></h1>
+    <div class="undertext">A one-time purchase of memory that will be immediately assigned to your account after paying for the order.</div>
+      <div class="undertext info">The purchase must exceed 5 PLN</div>
+    <div>
+        <span id="rangeValue"><small>Loading...</small></span>
+        <input class="range" type="range" name="" value="0" min="1" max="1024" onchange="rangeSlide(this.value)" onmousemove="rangeSlide(this.value)" name="pricing">
+    </div>
+    <div class="price">Loading...</div>
+    <script type="text/javascript">
+        function rangeSlide(value) {
+            document.getElementById('rangeValue').innerHTML = value + "<small>MB</small>";
+            var price = value * 0.01;
+            document.querySelector('.price').textContent = "Price: " + price.toFixed(2) + " PLN";
+        }
+    </script>
+</body>
+</html>
