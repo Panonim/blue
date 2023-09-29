@@ -78,4 +78,7 @@ li {
    header {
      max-width: 300px;
      }
+	 body {
+		 background-image: none;
+	 }
 }
