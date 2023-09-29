@@ -79,6 +79,9 @@ li {
      max-width: 300px;
      }
 	 body {
-		 background-image: none;
+		 background-image: none !important;
+	 }
+	 textarea {
+		     width: 90%;
 	 }
 }
