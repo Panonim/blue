@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5; /* Tło strony */
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='700' preserveAspectRatio='none' viewBox='0 0 1440 700'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1060%26quot%3b)' fill='none'%3e%3cpath d='M-46.32 320.53 a126.96 126.96 0 1 0 253.92 0 a126.96 126.96 0 1 0 -253.92 0z' fill='rgba(51%2c 51%2c 51%2c 0.71)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M365.66 687.88 a196.37 196.37 0 1 0 392.74 0 a196.37 196.37 0 1 0 -392.74 0z' fill='rgba(51%2c 51%2c 51%2c 0.71)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M928.35 566.28 a222.16 222.16 0 1 0 444.32 0 a222.16 222.16 0 1 0 -444.32 0z' fill='rgba(51%2c 51%2c 51%2c 0.71)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M752.75 147.21 a118.97 118.97 0 1 0 237.94 0 a118.97 118.97 0 1 0 -237.94 0z' fill='rgba(51%2c 51%2c 51%2c 0.71)' class='triangle-float3'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1060'%3e%3crect width='1440' height='700' fill='white'%3e%3c/rect%3e%3c/mask%3e%3cstyle%3e %40keyframes float1 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-10px%2c 0)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float1 %7b animation: float1 5s infinite%3b %7d %40keyframes float2 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-5px%2c -5px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float2 %7b animation: float2 4s infinite%3b %7d %40keyframes float3 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(0%2c -10px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float3 %7b animation: float3 6s infinite%3b %7d %3c/style%3e%3c/defs%3e%3c/svg%3e");
+}
+
+header {
+    background-color: transparent;
+    color: black;
+    padding: 10px;
+    text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+ position: sticky;
+  border: 3px solid #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff; /* Tło kontenera */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+textarea {
+  font-family: 'Ubuntu Mono', monospace;
+    width: 777px;
+    height: 200px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    resize: none;
+  font-size: 20px;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #333; /* Tło przycisków */
+    color: white; /* Kolor tekstu przycisków */
+}
+
+.file-list {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff; /* Tło listy plików */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+}
+
+
+ @media screen and (max-width: 768px) {
+   header {
+     max-width: 300px;
+     }
+}
