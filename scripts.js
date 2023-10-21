@@ -1,31 +1,31 @@
-
 var loader = document.getElementById("preloader");
-window.addEventListener("load", function(){
-  loader.style.display = "none"; 
+var content = document.querySelector('.content'); 
+
+window.addEventListener("load", function() {
+  loader.style.display = "none";
   content.classList.add("fadeIn");
   content.classList.add("fade-left");
 });
 
-var typed = new Typed(".aftertext", {
-strings: ["Blue", "Artur"],
-    typeSpeed: 150,
-    backSpeed: 100,
-    backDelay: 2000,
-    startDelay: 100,
-    loop: true,
-   cursorChar: '_',
-})
+var typed1 = new Typed(".aftertext", {
+  strings: ["Blue", "Artur"],
+  typeSpeed: 150,
+  backSpeed: 100,
+  backDelay: 2000,
+  startDelay: 100,
+  loop: true,
+  cursorChar: '_',
+});
 
-var typed = new Typed(".learning", {
-strings: ["javascript", "css", "html"],
-    typeSpeed: 100,
-    backDelay: 3000,
-    startDelay: 50,
-    loop: true,
-   cursorChar: '',
-    fadeOut: true,
-})
-
+var typed2 = new Typed(".learning", {
+  strings: ["javascript", "css", "html"],
+  typeSpeed: 100,
+  backDelay: 3000,
+  startDelay: 50,
+  loop: true,
+  cursorChar: '', 
+  fadeOut: true,
+});
 
 function updateProgressBar() {
   const progressBar = document.querySelector('.progress-bar');
@@ -50,9 +50,10 @@ function isElementInViewport(el) {
 }
 
 function handleScroll() {
-    if (isElementInViewport(aboutMe)) {
-        aboutMe.classList.add('show');
-        window.removeEventListener('scroll', handleScroll);
-    }
+  if (isElementInViewport(aboutMe)) {
+    aboutMe.classList.add('show');
+    window.removeEventListener('scroll', handleScroll);
+  }
 }
 
+window.addEventListener('scroll', handleScroll); 
