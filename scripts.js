@@ -19,11 +19,11 @@ strings: ["Blue", "Artur"],
 var typed = new Typed(".learning", {
 strings: ["javascript", "css", "html"],
     typeSpeed: 100,
-    backSpeed: 50,
     backDelay: 3000,
     startDelay: 50,
     loop: true,
    cursorChar: '',
+    fadeOut: true,
 })
 
 
