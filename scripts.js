@@ -3,8 +3,6 @@ var content = document.querySelector('.content');
 
 window.addEventListener("load", function() {
   loader.style.display = "none";
-  content.classList.add("fadeIn");
-  content.classList.add("fade-left");
 });
 
 var typed1 = new Typed(".aftertext", {
