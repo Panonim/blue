@@ -1,0 +1,57 @@
+// ⟁ \\var loader = document.getElementById("preloader");
+window.addEventListener("load", function(){
+  loader.style.display = "none"; 
+  content.classList.add("fadeIn");
+  content.classList.add("fade-left");
+});
+
+var typed = new Typed(".aftertext", {
+strings: ["Blue", "Artur"],
+    typeSpeed: 150,
+    backSpeed: 100,
+    backDelay: 2000,
+    startDelay: 100,
+    loop: true,
+   cursorChar: '_',
+})
+
+var typed = new Typed(".learning", {
+strings: ["javascript", "css", "html"],
+    typeSpeed: 100,
+    backSpeed: 50,
+    backDelay: 3000,
+    startDelay: 50,
+    loop: true,
+   cursorChar: '',
+})
+
+
+function updateProgressBar() {
+  const progressBar = document.querySelector('.progress-bar');
+  const totalHeight = document.body.scrollHeight - window.innerHeight;
+  const progress = (window.pageYOffset / totalHeight) * 100;
+  progressBar.style.width = progress + '%';
+}
+
+
+updateProgressBar(); 
+window.addEventListener('scroll', updateProgressBar);
+window.addEventListener('resize', updateProgressBar);
+
+const aboutMe = document.querySelector('.aboutme');
+
+function isElementInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+    );
+}
+
+function handleScroll() {
+    if (isElementInViewport(aboutMe)) {
+        aboutMe.classList.add('show');
+        window.removeEventListener('scroll', handleScroll);
+    }
+}
+
