@@ -57,4 +57,5 @@ function handleScroll() {
 window.addEventListener('scroll', handleScroll); 
 
 console.log("%c██████  ██      ██    ██ ███████ \n██   ██ ██      ██    ██ ██      \n██████  ██      ██    ██ █████   \n██   ██ ██      ██    ██ ██      \n██████  ███████  ██████  ███████ \n", "color: #5fcefa;");
+console.log("%cI often see you here, my friend.", "font-size: 25px;");
 
