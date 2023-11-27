@@ -134,9 +134,7 @@ body {
 
 .projects {
   padding: 20px;
-  background-color: #007bff; 
   border-radius: 10px; 
- background: rgba(203, 203, 203, 0.4);
   backdrop-filter: blur(7px);
   display: block;
 }
