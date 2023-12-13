@@ -5,13 +5,12 @@
   <title>Sample Video</title>
 </head>
 <body>
-  <video src="samplevid.mp4" controls></video>
-  <button id="fullscreen">Pełny ekran</button>
-
-  <script>
-    document.querySelector("#fullscreen").onclick = function() {
-      document.querySelector("video").requestFullscreen();
-    };
-  </script>
+  <video src="samplevid.mp4" autoplay controls></video>
 </body>
+  <script>
+    window.onload = function() {
+  document.querySelector("video").requestFullscreen();
+};
+
+  </script>
 </html>
