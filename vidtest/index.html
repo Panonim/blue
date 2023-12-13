@@ -1,14 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pełnoekranowy Film</title>
+  <meta charset="UTF-8">
+  <title>Sample Video</title>
 </head>
 <body>
-    <video controls autoplay playsinline>
-        <source src="samplevid.mp4" type="video/mp4">
-        Twoja przeglądarka nie obsługuje tagu wideo.
-    </video>
+  <video src="samplevid.mp4" controls></video>
+  <button id="fullscreen">Pełny ekran</button>
+
+  <script>
+    document.querySelector("#fullscreen").onclick = function() {
+      document.querySelector("video").requestFullscreen();
+    };
+  </script>
 </body>
 </html>
